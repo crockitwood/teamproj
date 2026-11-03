@@ -5,7 +5,7 @@ import { useSession } from '../../../shared/session.js'
 import { Badge, Button, Card, Empty, Field, Modal, PageHeader, Select, Stat } from '../../../shared/ui.jsx'
 import { ROLE_LABELS } from '../../auth/api.js'
 import { RequireLogin } from '../../auth/guard.jsx'
-import { activityStats, manageableActivities, undoCheckin } from '../api.js'
+import { CHECKABLE_STATUS, activityStats, manageableActivities, sortForCheckin, undoCheckin } from '../api.js'
 import '../checkin.css'
 
 export default function CheckinRecordsPage() {
@@ -24,8 +24,9 @@ function RecordsContent() {
   const users = useCollection('users')
 
   const isStaff = user.role === 'organizer' || user.role === 'admin'
-  const managed = manageableActivities(activities, user).sort(
-    (a, b) => new Date(b.startAt) - new Date(a.startAt),
+  const managed = sortForCheckin(
+    manageableActivities(activities, user).filter((item) => CHECKABLE_STATUS.includes(item.status)),
+    registrations,
   )
 
   const [selectedId, setSelectedId] = useState('')

@@ -13,6 +13,7 @@ import {
   formatCode,
   manageableActivities,
   normalizeCode,
+  sortForCheckin,
 } from '../api.js'
 import '../checkin.css'
 
@@ -31,8 +32,9 @@ function CheckinContent() {
   const checkins = useCollection('checkins')
 
   const isStaff = user.role === 'organizer' || user.role === 'admin'
-  const managed = manageableActivities(activities, user).filter((item) =>
-    CHECKABLE_STATUS.includes(item.status),
+  const managed = sortForCheckin(
+    manageableActivities(activities, user).filter((item) => CHECKABLE_STATUS.includes(item.status)),
+    registrations,
   )
 
   const [selectedId, setSelectedId] = useState('')

@@ -42,6 +42,15 @@ export function manageableActivities(activities, user) {
   return []
 }
 
+/** 现场核销时的活动排序：报名人数多的优先，其次按开始时间由近到远 */
+export function sortForCheckin(activities, registrations) {
+  const count = (activityId) =>
+    registrations.filter((item) => item.activityId === activityId && item.status === 'confirmed').length
+  return [...activities].sort(
+    (a, b) => count(b.id) - count(a.id) || new Date(a.startAt) - new Date(b.startAt),
+  )
+}
+
 /** 按签到码找到当前可签到的活动 */
 export function findActivityByCode(code) {
   const value = normalizeCode(code)
