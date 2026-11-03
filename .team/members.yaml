@@ -13,4 +13,4 @@ members:
   - { id: sunqi, name: 孙七, email: sunqi@campus.edu, role: member }
   - { id: zhouba, name: 周八, email: zhouba@campus.edu, role: member }
   - { id: wujiu, name: 吴九, email: wujiu@campus.edu, role: member }
-  - { id: zhengshi, name: 郑十, email: zhengshi@campus.edu, role: member }
+  - { id: zhengshi, name: tcl, email: 2723904705@qq.com, role: member }
