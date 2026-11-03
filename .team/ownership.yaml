@@ -1,0 +1,28 @@
+lead_override: true
+default_owner: "@lead"
+
+# 规则匹配：命中的 glob 中路径最长的一条胜出
+rules:
+  # 8 个功能模块，一人一个目录
+  - { path: "src/modules/auth/**", owner: lisi }
+  - { path: "src/modules/activities/**", owner: wangwu }
+  - { path: "src/modules/publish/**", owner: zhaoliu }
+  - { path: "src/modules/registration/**", owner: sunqi }
+  - { path: "src/modules/checkin/**", owner: zhouba }
+  - { path: "src/modules/comments/**", owner: wujiu }
+  - { path: "src/modules/notifications/**", owner: zhengshi }
+  - { path: "src/modules/analytics/**", owner: "@lead" }
+
+  # 公共设施归队长，组员不要直接改
+  - { path: "src/shared/**", owner: "@lead" }
+  - { path: "src/app/**", owner: "@lead" }
+  - { path: "src/main.jsx", owner: "@lead" }
+  - { path: "src/styles.css", owner: "@lead" }
+  - { path: "index.html", owner: "@lead" }
+  - { path: "package.json", owner: "@lead" }
+  - { path: "package-lock.json", owner: "@lead" }
+  - { path: "vite.config.js", owner: "@lead" }
+  - { path: "scripts/**", owner: "@lead" }
+  - { path: ".githooks/**", owner: "@lead" }
+  - { path: ".team/**", owner: "@lead" }
+  - { path: "README.md", owner: "@lead" }

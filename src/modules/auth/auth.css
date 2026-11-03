@@ -1,0 +1,143 @@
+/* 账号与权限模块样式：只作用于本模块页面 */
+
+.auth-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 4px;
+  background: #f1f2f7;
+  padding: 3px;
+  border-radius: 9px;
+}
+
+.auth-tab {
+  border: none;
+  background: transparent;
+  color: #4b5563;
+  font-size: 12px;
+  font-family: inherit;
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.auth-tab.active {
+  background: #fff;
+  color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.08);
+}
+
+.demo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.demo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+}
+
+.demo-item:hover {
+  border-color: #c7caf5;
+  background: #fbfbff;
+}
+
+.demo-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.demo-text span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.avatar-lg {
+  width: 46px;
+  height: 46px;
+  flex-basis: 46px;
+  font-size: 18px;
+}
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.role-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-error,
+.form-ok {
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.form-error {
+  background: #fdecec;
+  color: var(--danger);
+}
+
+.form-ok {
+  background: #e8f7ef;
+  color: var(--ok);
+}
+
+@media (max-width: 860px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+}

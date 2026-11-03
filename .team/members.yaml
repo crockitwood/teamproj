@@ -1,0 +1,16 @@
+project: 校园活动报名平台
+lead: lijiatong
+
+# 队员第一次接入时，在对话里认领自己的模块，然后执行：
+#   npm run team:claim -- <成员id>
+# 脚本会自动读取 git config 的 user.name / user.email，并更新下面这一行的 name 和 email。
+# 认领前 email 只是占位值，不用手动改。
+members:
+  - { id: lijiatong, name: lijiatong, email: crockitwood@gmai.com, role: lead }
+  - { id: lisi, name: 李四, email: lisi@campus.edu, role: member }
+  - { id: wangwu, name: 王五, email: wangwu@campus.edu, role: member }
+  - { id: zhaoliu, name: 赵六, email: zhaoliu@campus.edu, role: member }
+  - { id: sunqi, name: 孙七, email: sunqi@campus.edu, role: member }
+  - { id: zhouba, name: 周八, email: zhouba@campus.edu, role: member }
+  - { id: wujiu, name: 吴九, email: wujiu@campus.edu, role: member }
+  - { id: zhengshi, name: 郑十, email: zhengshi@campus.edu, role: member }

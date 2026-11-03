@@ -1,0 +1,23 @@
+{
+  "name": "campus-events",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "team:claim": "node scripts/team-claim.mjs",
+    "team:whoami": "node scripts/team-check.mjs --whoami",
+    "team:check": "node scripts/team-check.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}
