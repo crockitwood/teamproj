@@ -1,0 +1,194 @@
+/* 签到核销模块样式：只作用于本模块页面 */
+
+.ck-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+/* 签到码大字展示 */
+.ck-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px dashed #c7caf5;
+  border-radius: 12px;
+  padding: 16px 12px 16px 20px;
+  user-select: all;
+}
+
+.ck-code-hint {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* 提示信息 */
+.ck-msg {
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.ck-msg-error {
+  background: #fdecec;
+  color: var(--danger);
+}
+
+.ck-msg-ok {
+  background: #e8f7ef;
+  color: var(--ok);
+}
+
+/* 签到码输入框 */
+.ck-code-field input {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 20px;
+  letter-spacing: 6px;
+  text-align: center;
+  padding: 12px;
+}
+
+.ck-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ck-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #f1f2f7;
+  overflow: hidden;
+}
+
+.ck-progress span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+/* 列表 */
+.ck-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ck-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid #f1f2f7;
+}
+
+.ck-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ck-list-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ck-list-title {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ck-list-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* 表格 */
+.ck-table-wrap {
+  overflow-x: auto;
+}
+
+.ck-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.ck-table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.ck-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #f1f2f7;
+  vertical-align: middle;
+}
+
+.ck-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ck-table .ck-num {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.ck-tabs {
+  display: flex;
+  gap: 4px;
+  background: #f1f2f7;
+  padding: 3px;
+  border-radius: 9px;
+  align-self: flex-start;
+}
+
+.ck-tab {
+  border: none;
+  background: transparent;
+  color: #4b5563;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.ck-tab.active {
+  background: #fff;
+  color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.08);
+}
+
+@media (max-width: 860px) {
+  .ck-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ck-code {
+    font-size: 28px;
+    letter-spacing: 6px;
+  }
+}
