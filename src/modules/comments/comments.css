@@ -1,0 +1,283 @@
+/* 评论评分模块样式：只作用于本模块页面与可复用评论区 */
+
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 评分概览 */
+.comment-summary {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.9fr) minmax(0, 1.6fr);
+  gap: 16px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fbfbff;
+}
+
+.comment-score {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.comment-score strong {
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.score-bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.score-bars li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.score-bar-label {
+  flex: 0 0 34px;
+}
+
+.score-bar-track {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: #eceefa;
+  overflow: hidden;
+}
+
+.score-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.score-bar-count {
+  flex: 0 0 26px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 星星 */
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stars-md {
+  font-size: 20px;
+}
+
+.stars-sm {
+  font-size: 15px;
+}
+
+.star,
+.star-btn {
+  color: #d8dbe8;
+  line-height: 1;
+  border: none;
+  background: transparent;
+  padding: 0 1px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.star-btn {
+  cursor: pointer;
+  transition: transform 0.1s ease, color 0.1s ease;
+}
+
+.star-btn:hover {
+  transform: translateY(-1px);
+}
+
+.star.is-on,
+.star-btn.is-on {
+  color: #f0a92b;
+}
+
+.stars-text {
+  margin-left: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* 评价表单 */
+.comment-compose {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.compose-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.compose-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-hint {
+  margin: 0;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.comment-hint-error {
+  background: #fdecec;
+  color: var(--danger);
+}
+
+.comment-hint-ok {
+  background: #e8f7ef;
+  color: var(--ok);
+}
+
+.comment-notice {
+  padding: 14px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.comment-link {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 2px;
+}
+
+/* 评论列表 */
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment-item {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.comment-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.comment-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.comment-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.comment-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* 页面内统计 */
+.comment-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* 违规处理 */
+.moderate-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(160px, 1fr);
+  gap: 10px;
+}
+
+.moderate-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.moderate-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.moderate-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.moderate-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .comment-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .comment-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .moderate-filters {
+    grid-template-columns: 1fr;
+  }
+}
