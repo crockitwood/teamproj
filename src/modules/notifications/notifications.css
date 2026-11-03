@@ -1,0 +1,141 @@
+/* 通知中心模块样式：只作用于本模块页面，前缀 nt- 避免污染其他模块 */
+
+.nt-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nt-tabs {
+  display: flex;
+  gap: 4px;
+  background: #f1f2f7;
+  padding: 3px;
+  border-radius: 9px;
+}
+
+.nt-tab {
+  border: none;
+  background: transparent;
+  color: #4b5563;
+  font-size: 12px;
+  font-family: inherit;
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nt-tab.active {
+  background: #fff;
+  color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.08);
+}
+
+.nt-tab-count {
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.nt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nt-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.nt-item.is-unread {
+  border-color: #dfe1fb;
+  background: #fbfbff;
+}
+
+.nt-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.nt-dot.is-read {
+  background: transparent;
+}
+
+.nt-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nt-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nt-item.is-read .nt-title {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.nt-body {
+  font-size: 12px;
+  color: var(--muted);
+  word-break: break-word;
+}
+
+.nt-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.nt-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .nt-item {
+    flex-wrap: wrap;
+  }
+
+  .nt-actions {
+    margin-left: 18px;
+  }
+}
