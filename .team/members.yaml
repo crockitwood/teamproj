@@ -11,6 +11,6 @@ members:
   - { id: wangwu, name: 王五, email: wangwu@campus.edu, role: member }
   - { id: zhaoliu, name: 赵六, email: zhaoliu@campus.edu, role: member }
   - { id: sunqi, name: 孙七, email: sunqi@campus.edu, role: member }
-  - { id: zhouba, name: 周八, email: zhouba@campus.edu, role: member }
-  - { id: wujiu, name: 吴九, email: wujiu@campus.edu, role: member }
+  - { id: zhouba, name: zzsxk~, email: zhouba@campus.edu, role: member }
+  - { id: wujiu, name: yyj, email: engernages@gmail.com, role: member }
   - { id: zhengshi, name: tcl, email: 2723904705@qq.com, role: member }
